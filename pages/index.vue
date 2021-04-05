@@ -3,28 +3,10 @@
     <div>
       <Logo />
       <h1 class="title">
-        buymeacakeNuxt
+        Buy me a cake!
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <NuxtLink to="/dashboard" class="btn btn-dark btn-lg">Dashboard</NuxtLink>
     </div>
-    <button class="btn btn-primary">Siema</button>
   </div>
 </template>
 

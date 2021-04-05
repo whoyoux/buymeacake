@@ -1,7 +1,7 @@
 <template>
   <div class="text-center login-wrapper">
-            <SignUp />
-        </div>
+    <SignUp />
+  </div>
 </template>
 
 <script>

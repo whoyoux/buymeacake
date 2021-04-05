@@ -1,17 +1,17 @@
 <template>
-    <div class="text-center login-wrapper">
-        <SignIn />
-    </div>
+  <div class="text-center login-wrapper">
+    <SignIn />
+  </div>
 </template>
 
 <script>
 import SignIn from '@/components/SignIn.vue'
 export default {
-  beforeCreate() {
-    //    if(this.$store.getters.users.isLogged) this.$router.push('/');
-  },
   components: {
     SignIn
+  },
+  beforeCreate () {
+    //    if(this.$store.getters.users.isLogged) this.$router.push('/');
   }
 }
 </script>
@@ -24,7 +24,6 @@ export default {
     padding-top: 20px;
     padding-bottom: 40px;
 }
-
 
 img {
     width: 500px;
