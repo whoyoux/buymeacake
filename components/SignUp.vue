@@ -109,6 +109,8 @@ export default {
         .auth()
         .createUserWithEmailAndPassword(this.user.email, this.user.password)
         .then((data) => {
+          data.user.sendEmailVerification();
+
           data.user
             .updateProfile({
               displayName: this.user.username,
@@ -116,7 +118,7 @@ export default {
               lastName: this.user.lastName,
               createdAt: Date.now()
             })
-            .then(() => {
+            .then((data) => {
               toastr.success('Created new account!')
               this.$router.push('/')
             })

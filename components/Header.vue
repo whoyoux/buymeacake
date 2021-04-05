@@ -18,12 +18,13 @@
       </button>
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <div class="navbar-nav me-auto mb-2 mb-lg-0" />
-        <form class="d-flex">
+        <form class="d-flex" @submit.prevent="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-dark" type="submit">
             <img src="../assets/search-icon.svg" style="color: white" alt="search-icon" height="20" width="20">
           </button>
         </form>
+
         <div v-if="!$store.getters['users/isLogged']">
           <button class="btn btn-outline-dark btn_nav" style="margin-left: 12px" @click="$router.push('/signin')">
             Sign in
@@ -32,11 +33,13 @@
             Sign up
           </button>
         </div>
+
         <div v-else>
           <button class="btn btn-outline-dark btn_nav" style="margin-left: 12px" @click="signOut">
             Sign out
           </button>
         </div>
+        
       </div>
     </div>
   </header>
@@ -76,6 +79,9 @@ export default {
         .catch((err) => {
           toastr.error(err)
         })
+    },
+    search() {
+        toastr.success("Searching");
     }
   }
 }
